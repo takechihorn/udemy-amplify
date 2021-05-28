@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "udemyamplify4a191c14": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

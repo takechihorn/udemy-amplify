@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <div>
       <b-navbar toggleable="lg" type="dark" variant="info">
         <b-navbar-brand href="#">NavBar</b-navbar-brand>

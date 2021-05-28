@@ -3,7 +3,12 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-
+import Amplify from '@aws-amplify/core'
+import { Auth } from '@aws-amplify/auth'
+import '@aws-amplify/ui-vue'
+import awsmobile from './aws-exports'
+Amplify.configure(awsmobile)
+Auth.configure(awsmobile)
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
