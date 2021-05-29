@@ -231,8 +231,8 @@ export default Vue.extend({
               new Todo({
                 name: this.userInfo.username,
                 description: this.todo.description,
-                // sub: this.userInfo.attributes.sub,
-                // email: this.userInfo.email,
+                sub: this.userInfo.attributes.sub,
+                email: this.userInfo.attributes.email,
               })
             );
             console.log(
