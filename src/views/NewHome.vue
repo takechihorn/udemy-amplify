@@ -14,8 +14,8 @@
         ></amplify-sign-up>
       </amplify-authenticator>
       <div v-if="authState === 'signedin' && user">
-        <!-- <amplify-greetings :username="user.username"></amplify-greetings> -->
-        <!-- <amplify-sign-out button-text="Custom Text"></amplify-sign-out> -->
+        <amplify-greetings :username="user.username"></amplify-greetings>
+        <amplify-sign-out button-text="Custom Text"></amplify-sign-out>
         <div>Hello user, {{ user.username }} have a happy day!</div>
         <amplify-sign-out></amplify-sign-out>
       </div>
@@ -38,7 +38,6 @@ export default Vue.extend({
   data() {
     return {
       unsubscribeAuth: undefined,
-      // eslint-disable-next-line @typescript-eslint/ban-types
       user: null as CognitoUserInterface | null,
       authState: {} as AuthState,
       formFields: [

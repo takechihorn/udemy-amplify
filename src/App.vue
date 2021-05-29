@@ -9,12 +9,12 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
             <b-nav-item @click="$router.push('/')">Home</b-nav-item>
-            <b-nav-item @click="$router.push('/newHome')">New Home</b-nav-item>
+            <b-nav-item @click="$router.push('/newhome')">New Home</b-nav-item>
 
             <b-nav-item @click="$router.push('dataStore')"
               >DataStore</b-nav-item
             >
-            <!-- <b-nav-item @click="$router.push('graphQl')">GraphQl</b-nav-item> -->
+            <b-nav-item @click="$router.push('graphQl')">GraphQl</b-nav-item>
             <b-nav-item @click="$router.push('storage')">Storage</b-nav-item>
             <b-nav-item @click="$router.push('authentication')"
               >Authentication</b-nav-item

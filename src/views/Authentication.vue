@@ -132,7 +132,6 @@
 import { Auth } from "aws-amplify";
 import Vue from "vue";
 
-
 export default Vue.extend({
   name: "App",
   // async created() {},
@@ -189,114 +188,113 @@ export default Vue.extend({
     },
     async getCurrentUSerInfo() {
       console.log("in getCurrentUSerInfo()");
-      // try {
-      //   var currentUser = await Auth.currentUserInfo();
-      //   console.log(
-      //     "*** current user information: " +
-      //       JSON.stringify(currentUser, null, 2)
-      //   );
-      // } catch (err) {
-      //   console.log(
-      //     "*** current user information error: " + JSON.stringify(err, null, 2)
-      //   );
-      // }
+      try {
+        var currentUser = await Auth.currentUserInfo();
+        console.log(
+          "*** current user information: " +
+            JSON.stringify(currentUser, null, 2)
+        );
+      } catch (err) {
+        console.log(
+          "*** current user information error: " + JSON.stringify(err, null, 2)
+        );
+      }
 
-      // alternative way
-      // Auth.currentUserInfo()
-      //   .then((userInfo) => {
-      //     console.log(
-      //       "current user info: " + JSON.stringify(userInfo, null, 2)
-      //     );
-      //   })
-      //   .catch((err) => {
-      //     console.log(
-      //       "current user info error: " + JSON.stringify(err, null, 2)
-      //     );
-      //   });
+      Auth.currentUserInfo()
+        .then((userInfo) => {
+          console.log(
+            "current user info: " + JSON.stringify(userInfo, null, 2)
+          );
+        })
+        .catch((err) => {
+          console.log(
+            "current user info error: " + JSON.stringify(err, null, 2)
+          );
+        });
     },
     getCurrentAuthenticatedUser() {
       console.log("in getCurrentAuthenticatedUser()");
-      // Auth.currentAuthenticatedUser()
-      //   .then((cognitoUser) => {
-      //     console.log(
-      //       "current user info: " + JSON.stringify(cognitoUser, null, 2)
-      //     );
-      //   })
-      //   .catch((err) => {
-      //     console.log(
-      //       "current user info error: " + JSON.stringify(err, null, 2)
-      //     );
-      //   });
+      Auth.currentAuthenticatedUser()
+        .then((cognitoUser) => {
+          console.log(
+            "current user info: " + JSON.stringify(cognitoUser, null, 2)
+          );
+        })
+        .catch((err) => {
+          console.log(
+            "current user info error: " + JSON.stringify(err, null, 2)
+          );
+        });
     },
     getUserPoolUser() {
       console.log("in getUserPoolUser()");
-      // Auth.currentUserPoolUser()
-      //   .then((authenticatedCognitoUser) => {
-      //     console.log(
-      //       "currentUserPoolUser info: " +
-      //         JSON.stringify(authenticatedCognitoUser, null, 2)
-      //     );
-      //   })
-      //   .catch((err) => {
-      //     console.log(
-      //       "currentUserPoolUser info error: " + JSON.stringify(err, null, 2)
-      //     );
-      //   });
+      Auth.currentUserPoolUser()
+        .then((authenticatedCognitoUser) => {
+          console.log(
+            "currentUserPoolUser info: " +
+              JSON.stringify(authenticatedCognitoUser, null, 2)
+          );
+        })
+        .catch((err) => {
+          console.log(
+            "currentUserPoolUser info error: " + JSON.stringify(err, null, 2)
+          );
+        });
     },
     getCredential() {
       console.log("in getCredential()");
-      // Auth.currentCredentials()
-      //   .then((creds) => {
-      //     console.log(
-      //       "currentUserCredentials: " + JSON.stringify(creds, null, 2)
-      //     );
-      //   })
-      //   .catch((err) => {
-      //     console.log(
-      //       "currentUserCredentials error: " + JSON.stringify(err, null, 2)
-      //     );
-      //   });
+      Auth.currentCredentials()
+        .then((creds) => {
+          console.log(
+            "currentUserCredentials: " + JSON.stringify(creds, null, 2)
+          );
+        })
+        .catch((err) => {
+          console.log(
+            "currentUserCredentials error: " + JSON.stringify(err, null, 2)
+          );
+        });
     },
     getEssentialCredentials() {
       console.log("in getEssentialCredentials()");
-      // Auth.currentCredentials().then((credentials) => {
-      //   var essentialCreds = Auth.essentialCredentials(credentials);
-      //   console.log(
-      //     "essential credentials: " + JSON.stringify(essentialCreds, null, 2)
-      //   );
-      // });
+      Auth.currentCredentials().then((credentials) => {
+        var essentialCreds = Auth.essentialCredentials(credentials);
+        console.log(
+          "essential credentials: " + JSON.stringify(essentialCreds, null, 2)
+        );
+      });
     },
     getCurrentSession() {
-      //   Auth.currentSession()
-      //     .then((session) => {
-      //       console.log("current session: " + JSON.stringify(session, null, 2));
-      //     })
-      //     .catch((err) => {
-      //       console.log("current session error: " + JSON.stringify(err, null, 2));
-      //     });
+      Auth.currentSession()
+        .then((session) => {
+          console.log("current session: " + JSON.stringify(session, null, 2));
+        })
+        .catch((err) => {
+          console.log("current session error: " + JSON.stringify(err, null, 2));
+        });
     },
     getUserSession() {
-      // Auth.currentUserPoolUser()
-      //   .then((user) => {
-      //     Auth.userSession(user)
-      //       .then((session) => {
-      //         console.log("user session: " + JSON.stringify(session, null, 2));
-      //       })
-      //       .catch((err) => {
-      //         console.log(
-      //           "user session error: " + JSON.stringify(err, null, 2)
-      //         );
-      //       });
-      //   })
-      //   .catch((err) => {
-      //     console.log(
-      //       "currentUserPoolUser info error: " + JSON.stringify(err, null, 2)
-      //     );
-      //   });
+      Auth.currentUserPoolUser()
+        .then((user) => {
+          Auth.userSession(user)
+            .then((session) => {
+              console.log("user session: " + JSON.stringify(session, null, 2));
+            })
+            .catch((err) => {
+              console.log(
+                "user session error: " + JSON.stringify(err, null, 2)
+              );
+            });
+        })
+        .catch((err) => {
+          console.log(
+            "currentUserPoolUser info error: " + JSON.stringify(err, null, 2)
+          );
+        });
     },
     googleSignIn() {
       // Auth.federatedSignIn({ provider: "Google" });
-      // Auth.federatedSignIn();
+      Auth.federatedSignIn();
     },
   },
 });

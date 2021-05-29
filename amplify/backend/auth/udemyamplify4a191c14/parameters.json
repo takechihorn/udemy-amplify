@@ -1,6 +1,6 @@
 {
     "identityPoolName": "udemyamplify4a191c14_identitypool_4a191c14",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "udemya4a191c14",
     "userPoolName": "udemyamplify4a191c14_userpool_4a191c14",
     "autoVerifiedAttributes": [
