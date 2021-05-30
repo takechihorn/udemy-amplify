@@ -11,9 +11,9 @@
             <b-nav-item @click="$router.push('/')">Home</b-nav-item>
             <b-nav-item @click="$router.push('/newhome')">New Home</b-nav-item>
 
-            <b-nav-item @click="$router.push('dataStore')"
+            <!-- <b-nav-item @click="$router.push('dataStore')"
               >DataStore</b-nav-item
-            >
+            > -->
             <b-nav-item @click="$router.push('graphQl')">GraphQl</b-nav-item>
             <b-nav-item @click="$router.push('storage')">Storage</b-nav-item>
             <b-nav-item @click="$router.push('authentication')"
