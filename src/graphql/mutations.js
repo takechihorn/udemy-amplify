@@ -10,12 +10,6 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
-      sub
-      email
-      owner
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -30,12 +24,6 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
-      sub
-      email
-      owner
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -50,12 +38,6 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
-      sub
-      email
-      owner
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }

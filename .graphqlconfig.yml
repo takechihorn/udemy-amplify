@@ -1,5 +1,5 @@
 projects:
-  udemyamplify:
+  mygraphqlapi:
     schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js

@@ -32,7 +32,7 @@
     }
   },
   "api": {
-    "udemyamplify": {
+    "mygraphqlapi": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
