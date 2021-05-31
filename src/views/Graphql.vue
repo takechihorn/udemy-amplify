@@ -142,7 +142,6 @@ import * as mutations from "../graphql/mutations";
 import * as subscriptions from "../graphql/subscriptions";
 import { Auth } from "aws-amplify";
 import { userInfo } from "../../interfaces/types";
-import { Unsubscribable } from "rxjs";
 
 export default Vue.extend({
   name: "GraphQl",
