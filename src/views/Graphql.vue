@@ -251,7 +251,10 @@ export default Vue.extend({
       console.log("getting restaurant list....");
       try {
         const response = await API.graphql(graphqlOperation(listRestaurants));
-        this.restaurants = response.data.listRestaurants.items;
+        ((response: any) => {
+          this.restaurants = response.data.listRestaurants.items;
+        })(response);
+        //上はthis.restaurants = response.data.listRestaurants.items;を示している
         console.log(
           "list of restaurants: " + JSON.stringify(this.restaurants, null, 2)
         );
